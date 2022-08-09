@@ -1,0 +1,13 @@
+[package]
+name = "wifi_viewer"
+version = "1.0.0"
+edition = "2021"
+authors = ["Seok Won <ikr@kakao.com>"]
+description = "Able to see saved wifi informations on Windows"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+subprocess = "0.2"
+regex = "1.6"
+itertools = "0.10"
