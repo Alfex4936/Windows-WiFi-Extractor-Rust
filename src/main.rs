@@ -50,6 +50,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     if found_ssids.is_empty() {
         eprintln!("No WiFi profiles found.");
+        std::process::exit(1);
     }
 
     println!("Loading passwords...");
