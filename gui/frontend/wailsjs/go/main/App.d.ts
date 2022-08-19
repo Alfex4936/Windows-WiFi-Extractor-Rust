@@ -1,1 +1,1 @@
-export function LoadWifi(): Promise<string>;
+export function LoadWifi(): Promise<Map<string, string>>;

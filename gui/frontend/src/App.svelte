@@ -5,9 +5,14 @@
 
 <main>
   {#await wifi_promise}
-    <p>wifi...</p>
+    <p>Loading wifi profiles...<br />Might take a while!</p>
   {:then wifi}
-    <p>wait<br /> {wifi}</p>
+    {#each Object.entries(wifi) as [ssid, password]}
+      <li style="font-size: 42px;line-height: 2em">
+        <p style="display:inline;font-weight:bold">{ssid}</p>
+        : "{password}"
+      </li>
+    {/each}
   {:catch _}
     <p>error!</p>
   {/await}

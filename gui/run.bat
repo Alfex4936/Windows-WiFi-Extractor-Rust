@@ -1,0 +1,1 @@
+(wails build -debug -platform=windows) && (start /b ./build/bin/wifis.exe)
