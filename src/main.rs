@@ -1,5 +1,8 @@
 use itertools::Itertools;
 use regex::RegexBuilder;
+use std::sync::Arc;
+use std::thread;
+use std::time::Duration;
 use std::{collections::HashMap, error::Error};
 use subprocess::{Popen, PopenConfig, Redirection};
 
@@ -54,7 +57,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     println!("Loading passwords...");
+
     for (ssid, value) in found_ssids.iter_mut() {
+        // TODO - 멀티 쓰레딩으로 Go언어 GUI 버전처럼 바꾸기
+
         let cmd = format!("netsh wlan show profile {ssid} key=clear");
         let cmd: Vec<&str> = cmd.as_str().split(" ").map(|s| s).collect();
 
