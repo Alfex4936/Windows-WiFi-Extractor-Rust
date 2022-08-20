@@ -8,7 +8,7 @@ inspired by @hmaverickadams
 
 # Install
 
-Download `wifi_viewer.exe` or install from cargo
+Download `wifi_viewer.exe` from release [@HERE](https://github.com/Alfex4936/Windows-WiFi-Extractor-Rust/releases/download/v1.0.2/wifi_viewer.exe) or install from cargo
 
 ```bash
 cargo install wifi_viewer
